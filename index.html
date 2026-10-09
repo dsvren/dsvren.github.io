@@ -4,62 +4,62 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="color-scheme" content="light dark" />
-  <meta name="theme-color" content="#f0f1ed" />
-  <title>Sebastian Darren Desvera — Digital Marketing Specialist</title>
+  <meta name="theme-color" content="#f4f4ef" />
+  <title>Ren — Digital Marketing Specialist</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <style>
     :root {
       color-scheme: light;
-      --paper: #f0f1ed;
+      --paper: #f4f4ef;
       --surface: #ffffff;
-      --ink: #111318;
-      --muted: #5d625f;
-      --line: #c9ccc6;
-      --line-strong: #111318;
-      --blue: #1647ff;
-      --orange: #ff5c35;
-      --acid: #d8ff43;
-      --soft-blue: #dce4ff;
-      --grid: rgba(17, 19, 24, .075);
-      --shadow: rgba(17, 19, 24, .14);
-      --theme-icon: #111318;
+      --ink: #151714;
+      --muted: #60645d;
+      --line: #cfd2ca;
+      --line-strong: #151714;
+      --green: #1c5f48;
+      --green-soft: #d9eadc;
+      --lime: #d7f26b;
+      --orange: #f06946;
+      --blue: #2857d8;
+      --shadow: rgba(21, 23, 20, .12);
+      --grid: rgba(21, 23, 20, .055);
     }
 
     html[data-theme="dark"] {
       color-scheme: dark;
-      --paper: #101318;
-      --surface: #181c23;
-      --ink: #f3f4ef;
-      --muted: #a9afaa;
-      --line: #3a4047;
-      --line-strong: #f3f4ef;
-      --blue: #5f7fff;
-      --orange: #ff7657;
-      --acid: #c8f53f;
-      --soft-blue: #242f58;
-      --grid: rgba(243, 244, 239, .07);
-      --shadow: rgba(0, 0, 0, .38);
-      --theme-icon: #f3f4ef;
+      --paper: #111512;
+      --surface: #1a201c;
+      --ink: #f2f3ed;
+      --muted: #aeb5ac;
+      --line: #394039;
+      --line-strong: #f2f3ed;
+      --green: #79c9a8;
+      --green-soft: #203a2d;
+      --lime: #c6e85c;
+      --orange: #ff8060;
+      --blue: #7697f4;
+      --shadow: rgba(0, 0, 0, .34);
+      --grid: rgba(242, 243, 237, .045);
     }
 
     @media (prefers-color-scheme: dark) {
       html:not([data-theme="light"]) {
         color-scheme: dark;
-        --paper: #101318;
-        --surface: #181c23;
-        --ink: #f3f4ef;
-        --muted: #a9afaa;
-        --line: #3a4047;
-        --line-strong: #f3f4ef;
-        --blue: #5f7fff;
-        --orange: #ff7657;
-        --acid: #c8f53f;
-        --soft-blue: #242f58;
-        --grid: rgba(243, 244, 239, .07);
-        --shadow: rgba(0, 0, 0, .38);
-        --theme-icon: #f3f4ef;
+        --paper: #111512;
+        --surface: #1a201c;
+        --ink: #f2f3ed;
+        --muted: #aeb5ac;
+        --line: #394039;
+        --line-strong: #f2f3ed;
+        --green: #79c9a8;
+        --green-soft: #203a2d;
+        --lime: #c6e85c;
+        --orange: #ff8060;
+        --blue: #7697f4;
+        --shadow: rgba(0, 0, 0, .34);
+        --grid: rgba(242, 243, 237, .045);
       }
     }
 
@@ -79,11 +79,11 @@
       background-image:
         linear-gradient(var(--grid) 1px, transparent 1px),
         linear-gradient(90deg, var(--grid) 1px, transparent 1px);
-      background-size: 32px 32px;
+      background-size: 40px 40px;
       color: var(--ink);
       font-family: "Bricolage Grotesque", sans-serif;
       -webkit-font-smoothing: antialiased;
-      transition: background-color .35s ease, color .35s ease;
+      transition: background-color .3s ease, color .3s ease;
     }
 
     button, a { font: inherit; }
@@ -91,9 +91,9 @@
     a { color: inherit; }
 
     .site {
-      width: min(1240px, calc(100% - 48px));
+      width: min(1180px, calc(100% - 48px));
       margin: 0 auto;
-      padding: 26px 0 34px;
+      padding: 24px 0 32px;
     }
 
     .topline {
@@ -101,159 +101,131 @@
       align-items: center;
       justify-content: space-between;
       gap: 20px;
-      min-height: 52px;
-      padding-bottom: 18px;
+      padding-bottom: 16px;
       border-bottom: 1px solid var(--line-strong);
     }
 
-    .edition {
+    .availability {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 10px;
       margin: 0;
       font-family: "DM Mono", monospace;
+      color: var(--muted);
       font-size: 11px;
-      letter-spacing: .08em;
+      letter-spacing: .04em;
       text-transform: uppercase;
     }
 
-    .edition::before {
+    .availability::before {
       content: "";
-      width: 10px;
-      height: 10px;
-      background: var(--orange);
+      width: 9px;
+      height: 9px;
       border-radius: 50%;
-      box-shadow: 0 0 0 4px color-mix(in srgb, var(--orange) 20%, transparent);
+      background: var(--green);
+      box-shadow: 0 0 0 4px color-mix(in srgb, var(--green) 16%, transparent);
     }
 
     .theme-toggle {
       min-height: 40px;
       display: inline-flex;
       align-items: center;
-      gap: 10px;
+      gap: 9px;
       border: 1px solid var(--line-strong);
-      padding: 0 13px 0 10px;
+      padding: 0 13px;
       background: var(--surface);
-      color: var(--ink);
       cursor: pointer;
       box-shadow: 3px 3px 0 var(--line-strong);
-      transition: transform .18s ease, box-shadow .18s ease, background-color .35s ease;
+      transition: transform .18s ease, box-shadow .18s ease, background-color .3s ease;
     }
 
     .theme-toggle:hover { transform: translate(-1px, -1px); box-shadow: 5px 5px 0 var(--line-strong); }
     .theme-toggle:active { transform: translate(2px, 2px); box-shadow: 1px 1px 0 var(--line-strong); }
-    .theme-toggle:focus-visible { outline: 3px solid var(--acid); outline-offset: 3px; }
-
-    .theme-toggle__icon {
-      width: 20px;
-      height: 20px;
-      display: grid;
-      place-items: center;
-    }
-
-    .theme-toggle__icon svg { width: 18px; height: 18px; stroke: var(--theme-icon); }
+    .theme-toggle:focus-visible, a:focus-visible, button:focus-visible { outline: 3px solid var(--lime); outline-offset: 3px; }
+    .theme-toggle svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.7; }
     .theme-toggle__label { font-family: "DM Mono", monospace; font-size: 11px; text-transform: uppercase; }
 
     .hero {
-      position: relative;
       display: grid;
-      grid-template-columns: minmax(0, 1.55fr) minmax(280px, .45fr);
-      min-height: 630px;
+      grid-template-columns: minmax(0, 1.48fr) minmax(290px, .52fr);
       border-bottom: 1px solid var(--line-strong);
     }
 
     .hero__main {
       min-width: 0;
-      padding: clamp(62px, 8vw, 110px) clamp(24px, 6vw, 84px) 56px 0;
+      padding: clamp(58px, 8vw, 92px) clamp(30px, 6vw, 74px) clamp(52px, 7vw, 76px) 0;
       border-right: 1px solid var(--line-strong);
     }
 
-    .eyebrow {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      margin: 0 0 27px;
+    .intro-kicker {
+      margin: 0 0 19px;
       font-family: "DM Mono", monospace;
-      color: var(--muted);
+      color: var(--green);
       font-size: 12px;
-      text-transform: uppercase;
-    }
-
-    .eyebrow__index {
-      display: grid;
-      place-items: center;
-      width: 34px;
-      height: 26px;
-      background: var(--blue);
-      color: #fff;
+      font-weight: 500;
     }
 
     h1 {
-      max-width: 900px;
+      max-width: 760px;
       margin: 0;
-      font-size: clamp(60px, 8.5vw, 120px);
-      font-weight: 700;
-      line-height: .82;
-      letter-spacing: -.075em;
+      font-size: clamp(46px, 7vw, 86px);
+      font-weight: 650;
+      line-height: .96;
+      letter-spacing: -.06em;
       text-wrap: balance;
     }
 
-    h1 span { display: block; }
-    h1 .outline {
-      color: transparent;
-      -webkit-text-stroke: 2px var(--ink);
-      text-stroke: 2px var(--ink);
-    }
-
-    .role-line {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 11px;
-      margin-top: 42px;
-      font-size: clamp(20px, 2.4vw, 31px);
-      font-weight: 600;
-      letter-spacing: -.03em;
-    }
-
-    .role-line__static { white-space: nowrap; }
-    .word-window {
+    h1 .hello { color: var(--muted); font-weight: 500; }
+    h1 .name {
       position: relative;
-      height: 1.28em;
-      min-width: 6.5em;
-      overflow: hidden;
-      background: var(--acid);
-      color: #111318;
-      transform: rotate(-1.5deg);
-    }
-
-    .word-track {
-      display: flex;
-      flex-direction: column;
-      animation: word-cycle 8s cubic-bezier(.72, 0, .28, 1) infinite;
-    }
-
-    .word-track span {
-      height: 1.28em;
-      display: flex;
-      align-items: center;
-      padding: 0 .42em;
+      display: inline-block;
+      color: var(--ink);
       white-space: nowrap;
     }
 
-    .intro {
-      max-width: 630px;
-      margin: 29px 0 0;
-      color: var(--muted);
-      font-size: clamp(16px, 1.4vw, 19px);
-      line-height: 1.6;
+    h1 .name::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      left: -.03em;
+      right: -.04em;
+      bottom: .04em;
+      height: .22em;
+      background: var(--lime);
+      transform: rotate(-1.5deg);
     }
+
+    .role {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin: 24px 0 0;
+      border: 1px solid var(--line-strong);
+      padding: 9px 12px;
+      background: var(--surface);
+      font-family: "DM Mono", monospace;
+      font-size: clamp(11px, 1.2vw, 13px);
+      font-weight: 500;
+      box-shadow: 4px 4px 0 var(--green);
+    }
+
+    .role::before { content: "/"; color: var(--orange); }
+
+    .bio {
+      max-width: 720px;
+      margin: 33px 0 0;
+      color: var(--muted);
+      font-size: clamp(16px, 1.5vw, 19px);
+      line-height: 1.68;
+    }
+
+    .bio strong { color: var(--ink); font-weight: 600; }
 
     .actions {
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
-      margin-top: 36px;
+      margin-top: 34px;
     }
 
     .action {
@@ -268,103 +240,88 @@
       color: var(--paper);
       text-decoration: none;
       cursor: pointer;
-      transition: transform .18s ease, box-shadow .18s ease, background-color .18s ease;
+      transition: transform .18s ease, box-shadow .18s ease;
     }
 
     .action--secondary { background: var(--surface); color: var(--ink); }
     .action:hover { transform: translateY(-3px); box-shadow: 0 5px 0 var(--orange); }
-    .action:focus-visible { outline: 3px solid var(--acid); outline-offset: 3px; }
     .action svg { width: 17px; height: 17px; fill: none; stroke: currentColor; stroke-width: 1.8; }
 
     .hero__side {
       display: flex;
       flex-direction: column;
       min-width: 0;
-      background: color-mix(in srgb, var(--surface) 70%, transparent);
+      background: color-mix(in srgb, var(--surface) 74%, transparent);
     }
 
-    .portrait-mark {
+    .impact {
       position: relative;
-      min-height: 300px;
-      display: grid;
-      place-items: center;
+      min-height: 255px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
       overflow: hidden;
+      padding: 26px;
+      background: var(--green);
+      color: #f7fff9;
       border-bottom: 1px solid var(--line-strong);
-      background: var(--blue);
     }
 
-    .portrait-mark::before,
-    .portrait-mark::after {
+    .impact::before {
       content: "";
       position: absolute;
-      border: 1px solid rgba(255,255,255,.45);
+      width: 230px;
+      height: 230px;
+      right: -72px;
+      top: -88px;
+      border: 1px solid rgba(255,255,255,.42);
       border-radius: 50%;
+      box-shadow: 0 0 0 38px rgba(255,255,255,.06), 0 0 0 76px rgba(255,255,255,.04);
     }
 
-    .portrait-mark::before { width: 220px; height: 220px; }
-    .portrait-mark::after { width: 310px; height: 310px; }
-
-    .monogram {
+    .impact__label {
       position: relative;
-      z-index: 1;
-      color: #fff;
-      font-size: clamp(94px, 11vw, 146px);
-      font-weight: 800;
-      line-height: 1;
-      letter-spacing: -.11em;
-      transform: translateX(-.05em);
-    }
-
-    .spark {
-      position: absolute;
-      width: 72px;
-      height: 72px;
-      right: 15%;
-      top: 15%;
-      background: var(--acid);
-      clip-path: polygon(50% 0, 58% 39%, 100% 50%, 58% 61%, 50% 100%, 42% 61%, 0 50%, 42% 39%);
-      animation: spin 11s linear infinite;
-    }
-
-    .side-block {
-      padding: 24px;
-      border-bottom: 1px solid var(--line-strong);
-    }
-
-    .side-block:last-child { border-bottom: 0; }
-    .side-label {
-      margin: 0 0 14px;
+      margin: 0 0 10px;
       font-family: "DM Mono", monospace;
-      color: var(--muted);
       font-size: 10px;
-      letter-spacing: .1em;
+      letter-spacing: .08em;
       text-transform: uppercase;
     }
 
-    .focus-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
+    .impact__number {
+      position: relative;
       margin: 0;
-      padding: 0;
-      list-style: none;
+      font-size: clamp(50px, 7vw, 78px);
+      font-weight: 700;
+      line-height: .85;
+      letter-spacing: -.06em;
     }
 
-    .focus-list li {
-      border: 1px solid var(--line);
-      padding: 7px 9px;
-      background: var(--surface);
-      font-family: "DM Mono", monospace;
-      font-size: 11px;
+    .impact__desc {
+      position: relative;
+      max-width: 210px;
+      margin: 14px 0 0;
+      font-size: 14px;
+      line-height: 1.45;
     }
 
-    .quote {
-      margin: 0;
-      font-size: 19px;
-      font-weight: 600;
-      line-height: 1.35;
-      letter-spacing: -.02em;
+    .stat-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      border-bottom: 1px solid var(--line-strong);
     }
+
+    .stat {
+      padding: 25px 22px;
+    }
+
+    .stat + .stat { border-left: 1px solid var(--line-strong); }
+    .stat strong { display: block; font-size: 31px; line-height: 1; letter-spacing: -.04em; }
+    .stat span { display: block; margin-top: 7px; color: var(--muted); font-family: "DM Mono", monospace; font-size: 10px; text-transform: uppercase; }
+
+    .focus-note { padding: 24px; }
+    .focus-note p:first-child { margin: 0 0 10px; color: var(--muted); font-family: "DM Mono", monospace; font-size: 10px; text-transform: uppercase; }
+    .focus-note p:last-child { margin: 0; font-size: 18px; font-weight: 600; line-height: 1.35; letter-spacing: -.02em; }
 
     .ticker {
       position: relative;
@@ -373,86 +330,146 @@
       margin-left: -50vw;
       overflow: hidden;
       border-bottom: 1px solid var(--line-strong);
-      background: var(--orange);
-      color: #111318;
+      background: var(--lime);
+      color: #151714;
     }
 
     .ticker__track {
       width: max-content;
       display: flex;
-      align-items: center;
-      animation: ticker-move 24s linear infinite;
+      animation: ticker-move 28s linear infinite;
     }
 
     .ticker__group {
-      display: flex;
-      align-items: center;
       flex-shrink: 0;
-      padding: 13px 0;
+      display: flex;
+      padding: 12px 0;
     }
 
     .ticker__group span {
       display: flex;
       align-items: center;
-      gap: 24px;
-      padding-left: 24px;
+      gap: 20px;
+      padding-left: 20px;
       font-family: "DM Mono", monospace;
-      font-size: 12px;
+      font-size: 11px;
       font-weight: 500;
       text-transform: uppercase;
       white-space: nowrap;
     }
 
-    .ticker__group span::after { content: "✦"; font-size: 16px; }
+    .ticker__group span::after { content: "•"; color: var(--green); }
 
-    .contact-panel {
-      display: grid;
-      grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr);
+    .section {
+      padding: clamp(56px, 8vw, 88px) 0;
       border-bottom: 1px solid var(--line-strong);
     }
 
-    .contact-copy {
-      padding: 56px 48px 56px 0;
-      border-right: 1px solid var(--line-strong);
+    .section-head {
+      display: grid;
+      grid-template-columns: 150px minmax(0, 1fr);
+      gap: 30px;
+      margin-bottom: 38px;
     }
 
-    .contact-copy p:first-child {
-      margin: 0 0 14px;
+    .section-index {
+      margin: 4px 0 0;
       font-family: "DM Mono", monospace;
-      color: var(--blue);
+      color: var(--green);
       font-size: 11px;
       text-transform: uppercase;
     }
 
-    .contact-copy h2 {
-      margin: 0;
-      font-size: clamp(34px, 4.2vw, 58px);
-      line-height: .98;
-      letter-spacing: -.055em;
-      text-wrap: balance;
+    .section-title { margin: 0; font-size: clamp(35px, 5vw, 58px); line-height: .98; letter-spacing: -.05em; }
+    .section-desc { max-width: 630px; margin: 14px 0 0; color: var(--muted); font-size: 17px; line-height: 1.6; }
+
+    .tools {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-left: 180px;
     }
 
+    .tool {
+      border: 1px solid var(--line);
+      padding: 10px 13px;
+      background: var(--surface);
+      font-family: "DM Mono", monospace;
+      font-size: 11px;
+      box-shadow: 2px 2px 0 var(--line);
+    }
+
+    .services { display: grid; border-top: 1px solid var(--line-strong); }
+
+    .service {
+      display: grid;
+      grid-template-columns: 70px minmax(220px, .8fr) minmax(0, 1.2fr);
+      gap: 24px;
+      align-items: center;
+      min-height: 118px;
+      padding: 20px 0;
+      border-bottom: 1px solid var(--line);
+      transition: padding .2s ease, background-color .2s ease;
+    }
+
+    .service:hover { padding-left: 15px; padding-right: 15px; background: var(--green-soft); }
+    .service__number { font-family: "DM Mono", monospace; color: var(--orange); font-size: 12px; }
+    .service h3 { margin: 0; font-size: clamp(21px, 2.3vw, 29px); line-height: 1.08; letter-spacing: -.035em; }
+    .service p { margin: 0; color: var(--muted); font-size: 16px; line-height: 1.5; }
+
+    .skills-layout {
+      display: grid;
+      grid-template-columns: minmax(240px, .65fr) minmax(0, 1.35fr);
+      gap: clamp(38px, 7vw, 90px);
+    }
+
+    .skills-copy h2 { margin: 0; font-size: clamp(38px, 5vw, 60px); line-height: .98; letter-spacing: -.05em; }
+    .skills-copy p { margin: 19px 0 0; color: var(--muted); font-size: 17px; line-height: 1.55; }
+
+    .skill-list { display: grid; gap: 22px; }
+    .skill__head { display: flex; justify-content: space-between; gap: 18px; margin-bottom: 9px; }
+    .skill__name { font-weight: 600; }
+    .skill__value { font-family: "DM Mono", monospace; color: var(--green); font-size: 12px; }
+    .skill__track { height: 10px; border: 1px solid var(--line-strong); background: var(--surface); }
+    .skill__fill { width: var(--level); height: 100%; background: var(--green); transform-origin: left; animation: skill-in 1s cubic-bezier(.2,.8,.2,1) both; }
+    .skill:nth-child(2) .skill__fill { animation-delay: .08s; background: var(--blue); }
+    .skill:nth-child(3) .skill__fill { animation-delay: .16s; background: var(--orange); }
+    .skill:nth-child(4) .skill__fill { animation-delay: .24s; background: var(--green); }
+    .skill:nth-child(5) .skill__fill { animation-delay: .32s; background: var(--blue); }
+
+    .contact-panel {
+      display: grid;
+      grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr);
+      border-bottom: 1px solid var(--line-strong);
+    }
+
+    .contact-copy {
+      padding: 58px 44px 58px 0;
+      border-right: 1px solid var(--line-strong);
+    }
+
+    .contact-copy p { margin: 0 0 13px; font-family: "DM Mono", monospace; color: var(--green); font-size: 11px; text-transform: uppercase; }
+    .contact-copy h2 { margin: 0; font-size: clamp(34px, 4.4vw, 56px); line-height: .98; letter-spacing: -.055em; text-wrap: balance; }
     .contact-links { display: grid; }
 
     .contact-link {
       min-width: 0;
-      min-height: 74px;
+      min-height: 71px;
       display: grid;
-      grid-template-columns: 120px minmax(0, 1fr) 30px;
+      grid-template-columns: 100px minmax(0, 1fr) 24px;
       gap: 16px;
       align-items: center;
-      padding: 12px 0 12px 34px;
+      padding: 12px 0 12px 32px;
       border-bottom: 1px solid var(--line);
       text-decoration: none;
       transition: background-color .18s ease, padding-left .18s ease;
     }
 
     .contact-link:last-child { border-bottom: 0; }
-    .contact-link:hover { padding-left: 44px; background: var(--soft-blue); }
-    .contact-link:focus-visible { outline: 3px solid var(--acid); outline-offset: -3px; }
+    .contact-link:hover { padding-left: 42px; background: var(--green-soft); }
     .contact-link__type { font-family: "DM Mono", monospace; color: var(--muted); font-size: 10px; text-transform: uppercase; }
     .contact-link__value { min-width: 0; overflow-wrap: anywhere; font-weight: 600; }
-    .contact-link__arrow { color: var(--blue); font-size: 20px; }
+    .contact-link__arrow { color: var(--green); font-size: 19px; }
 
     .footer {
       display: flex;
@@ -475,8 +492,8 @@
       max-width: min(340px, calc(100% - 48px));
       border: 1px solid var(--line-strong);
       padding: 12px 16px;
-      background: var(--acid);
-      color: #111318;
+      background: var(--lime);
+      color: #151714;
       font-family: "DM Mono", monospace;
       font-size: 11px;
       box-shadow: 5px 5px 0 var(--line-strong);
@@ -488,47 +505,47 @@
 
     .toast.is-visible { opacity: 1; transform: translateY(0); }
 
-    @keyframes word-cycle {
-      0%, 18% { transform: translateY(0); }
-      25%, 43% { transform: translateY(-1.28em); }
-      50%, 68% { transform: translateY(-2.56em); }
-      75%, 93% { transform: translateY(-3.84em); }
-      100% { transform: translateY(-5.12em); }
-    }
-
     @keyframes ticker-move { to { transform: translateX(-50%); } }
-    @keyframes spin { to { transform: rotate(360deg); } }
+    @keyframes skill-in { from { transform: scaleX(0); } to { transform: scaleX(1); } }
 
-    @media (max-width: 900px) {
+    @media (max-width: 860px) {
       .site { width: min(100% - 32px, 760px); }
       .hero { grid-template-columns: 1fr; }
       .hero__main { border-right: 0; padding-right: 0; }
       .hero__side { display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid var(--line-strong); }
-      .portrait-mark { min-height: 250px; grid-row: 1 / 3; border-right: 1px solid var(--line-strong); border-bottom: 0; }
-      .side-block:last-child { border-bottom: 0; }
+      .impact { grid-row: 1 / 3; border-right: 1px solid var(--line-strong); border-bottom: 0; }
+      .stat-row { border-bottom: 1px solid var(--line-strong); }
+      .focus-note { align-self: center; }
+      .section-head { grid-template-columns: 110px minmax(0, 1fr); }
+      .tools { margin-left: 140px; }
       .contact-panel { grid-template-columns: 1fr; }
       .contact-copy { border-right: 0; border-bottom: 1px solid var(--line-strong); padding-right: 0; }
       .contact-link { padding-left: 0; }
       .contact-link:hover { padding-left: 10px; }
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 620px) {
       .site { width: min(100% - 24px, 520px); padding-top: 14px; }
-      .topline { gap: 10px; }
-      .edition span { display: none; }
-      .theme-toggle__label { max-width: 78px; overflow: hidden; white-space: nowrap; }
-      .hero__main { padding: 54px 0 42px; }
-      h1 { font-size: clamp(54px, 19vw, 84px); line-height: .87; }
-      h1 .outline { -webkit-text-stroke-width: 1.5px; }
-      .role-line { align-items: flex-start; flex-direction: column; margin-top: 34px; }
-      .word-window { min-width: 0; width: min(100%, 8em); }
+      .availability span { display: none; }
+      .theme-toggle__label { display: none; }
+      .theme-toggle { padding: 0 10px; }
+      .hero__main { padding: 50px 0 45px; }
+      h1 { font-size: clamp(43px, 13vw, 63px); }
+      .role { width: 100%; line-height: 1.45; }
       .actions { display: grid; grid-template-columns: 1fr; }
       .action { width: 100%; }
       .hero__side { grid-template-columns: 1fr; }
-      .portrait-mark { min-height: 220px; grid-row: auto; border-right: 0; border-bottom: 1px solid var(--line-strong); }
-      .spark { width: 56px; height: 56px; }
-      .contact-copy { padding: 44px 0 36px; }
-      .contact-link { grid-template-columns: 82px minmax(0, 1fr) 24px; gap: 8px; min-height: 70px; }
+      .impact { min-height: 230px; grid-row: auto; border-right: 0; border-bottom: 1px solid var(--line-strong); }
+      .focus-note { display: none; }
+      .section-head { display: block; }
+      .section-index { margin-bottom: 13px; }
+      .tools { margin-left: 0; }
+      .service { grid-template-columns: 38px minmax(0, 1fr); gap: 13px; min-height: 0; padding: 22px 0; }
+      .service p { grid-column: 2; font-size: 15px; }
+      .service:hover { padding-left: 8px; padding-right: 8px; }
+      .skills-layout { grid-template-columns: 1fr; gap: 36px; }
+      .contact-copy { padding: 46px 0 36px; }
+      .contact-link { grid-template-columns: 76px minmax(0, 1fr) 20px; gap: 8px; min-height: 68px; }
       .footer { flex-direction: column; gap: 6px; }
     }
 
@@ -540,45 +557,28 @@
         scroll-behavior: auto !important;
         transition-duration: .001ms !important;
       }
-      .word-track { transform: translateY(0) !important; }
     }
   </style>
 </head>
 <body>
   <main class="site">
     <header class="topline">
-      <p class="edition"><span aria-hidden="true"></span>Portfolio / Selected profile / 2026</p>
+      <p class="availability"><span>Terbuka untuk kolaborasi digital</span></p>
       <button class="theme-toggle" id="themeToggle" type="button" aria-pressed="false" aria-label="Aktifkan tampilan gelap">
-        <span class="theme-toggle__icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24"><path d="M12 3v2m0 14v2M3 12h2m14 0h2M5.64 5.64l1.42 1.42m9.88 9.88 1.42 1.42m0-12.72-1.42 1.42M7.06 16.94l-1.42 1.42"/><circle cx="12" cy="12" r="4"/></svg>
-        </span>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v2m0 14v2M3 12h2m14 0h2M5.64 5.64l1.42 1.42m9.88 9.88 1.42 1.42m0-12.72-1.42 1.42M7.06 16.94l-1.42 1.42"/><circle cx="12" cy="12" r="4"/></svg>
         <span class="theme-toggle__label" id="themeLabel">Mode gelap</span>
       </button>
     </header>
 
     <section class="hero" aria-labelledby="profile-title">
       <div class="hero__main">
-        <p class="eyebrow"><span class="eyebrow__index">01</span> Digital Marketing Specialist</p>
-        <h1 id="profile-title"><span>Sebastian</span><span class="outline">Darren</span><span>Desvera.</span></h1>
-
-        <div class="role-line" aria-label="Digital marketing untuk strategi, kampanye, pertumbuhan, dan cerita merek">
-          <span class="role-line__static">Bergerak lewat</span>
-          <span class="word-window" aria-hidden="true">
-            <span class="word-track">
-              <span>strategi.</span>
-              <span>kampanye.</span>
-              <span>pertumbuhan.</span>
-              <span>cerita merek.</span>
-              <span>strategi.</span>
-            </span>
-          </span>
-        </div>
-
-        <p class="intro">Saya menghubungkan ide, audiens, dan eksekusi menjadi komunikasi digital yang terasa jelas, relevan, dan punya arah.</p>
-
+        <p class="intro-kicker">Digital marketing yang terukur, bukan sekadar ramai.</p>
+        <h1 id="profile-title"><span class="hello">Hi, I’m</span> <span class="name">Ren.</span></h1>
+        <p class="role">Digital Marketing Specialist | Performance &amp; Content</p>
+        <p class="bio">Saya membantu <strong>UMKM dan brand meningkatkan penjualan</strong> melalui strategi digital yang terukur. Fokus saya di Meta Ads, Google Ads, dan Content Strategy. Berpengalaman 2+ tahun mengelola budget iklan &gt;100jt/bulan.</p>
         <div class="actions">
           <a class="action" href="mailto:ren@rendsv.my.id">
-            Hubungi saya
+            Diskusikan project
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-5-5 5 5-5 5"/></svg>
           </a>
           <button class="action action--secondary" type="button" id="copyEmail">
@@ -588,56 +588,86 @@
         </div>
       </div>
 
-      <aside class="hero__side" aria-label="Ringkasan profil">
-        <div class="portrait-mark" aria-hidden="true">
-          <span class="spark"></span>
-          <span class="monogram">SD</span>
+      <aside class="hero__side" aria-label="Ringkasan pengalaman">
+        <div class="impact">
+          <p class="impact__label">Budget iklan terkelola</p>
+          <p class="impact__number">&gt;100jt</p>
+          <p class="impact__desc">per bulan untuk kampanye berbasis performa.</p>
         </div>
-        <div class="side-block">
-          <p class="side-label">Fokus</p>
-          <ul class="focus-list">
-            <li>Strategy</li>
-            <li>Campaign</li>
-            <li>Content</li>
-            <li>Growth</li>
-          </ul>
+        <div class="stat-row">
+          <div class="stat"><strong>2+</strong><span>Tahun pengalaman</span></div>
+          <div class="stat"><strong>4</strong><span>Layanan utama</span></div>
         </div>
-        <div class="side-block">
-          <p class="side-label">Pendekatan</p>
-          <p class="quote">Berpikir tajam. Bergerak terukur. Tetap manusia.</p>
+        <div class="focus-note">
+          <p>Fokus utama</p>
+          <p>Ads yang efektif, konten yang relevan, data yang bisa ditindaklanjuti.</p>
         </div>
       </aside>
     </section>
 
     <div class="ticker" aria-hidden="true">
       <div class="ticker__track">
-        <div class="ticker__group">
-          <span>Digital Strategy</span><span>Creative Campaign</span><span>Audience Growth</span><span>Brand Story</span>
-        </div>
-        <div class="ticker__group">
-          <span>Digital Strategy</span><span>Creative Campaign</span><span>Audience Growth</span><span>Brand Story</span>
-        </div>
+        <div class="ticker__group"><span>Meta Ads Manager</span><span>Google Ads</span><span>Google Analytics 4</span><span>TikTok Ads</span><span>Canva</span><span>CapCut</span><span>Keyword Planner</span><span>Looker Studio</span></div>
+        <div class="ticker__group"><span>Meta Ads Manager</span><span>Google Ads</span><span>Google Analytics 4</span><span>TikTok Ads</span><span>Canva</span><span>CapCut</span><span>Keyword Planner</span><span>Looker Studio</span></div>
       </div>
     </div>
 
+    <section class="section" aria-labelledby="tools-heading">
+      <div class="section-head">
+        <p class="section-index">01 / Tools</p>
+        <div>
+          <h2 class="section-title" id="tools-heading">Tools yang saya kuasai.</h2>
+          <p class="section-desc">Perangkat kerja untuk merancang kampanye, membaca data, dan mengeksekusi konten dari awal sampai laporan.</p>
+        </div>
+      </div>
+      <div class="tools" aria-label="Daftar tools">
+        <span class="tool">Meta Ads Manager</span><span class="tool">Google Ads</span><span class="tool">Google Analytics 4</span><span class="tool">TikTok Ads</span><span class="tool">Canva</span><span class="tool">CapCut</span><span class="tool">Keyword Planner</span><span class="tool">Looker Studio</span>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="services-heading">
+      <div class="section-head">
+        <p class="section-index">02 / Layanan</p>
+        <div>
+          <h2 class="section-title" id="services-heading">Dari traffic hingga insight.</h2>
+          <p class="section-desc">Strategi dan eksekusi digital yang saling terhubung untuk membantu pertumbuhan bisnis.</p>
+        </div>
+      </div>
+      <div class="services">
+        <article class="service"><span class="service__number">01</span><h3>Paid Ads</h3><p>Meta, TikTok, dan Google Ads dengan fokus optimasi ROAS &amp; Leads.</p></article>
+        <article class="service"><span class="service__number">02</span><h3>Social Media Management</h3><p>Perencanaan konten dan growth organik yang konsisten.</p></article>
+        <article class="service"><span class="service__number">03</span><h3>SEO &amp; Content Marketing</h3><p>Artikel strategis untuk meningkatkan website traffic.</p></article>
+        <article class="service"><span class="service__number">04</span><h3>Analytic &amp; Reporting</h3><p>Tracking performa mingguan dan bulanan yang mudah dibaca.</p></article>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="skills-heading">
+      <div class="skills-layout">
+        <div class="skills-copy">
+          <p class="section-index">03 / Skill</p>
+          <h2 id="skills-heading">Keahlian inti.</h2>
+          <p>Kombinasi strategi, kreativitas, dan analisis untuk mengubah data menjadi keputusan pemasaran yang lebih baik.</p>
+        </div>
+        <div class="skill-list">
+          <div class="skill"><div class="skill__head"><span class="skill__name">Performance Marketing</span><span class="skill__value">90%</span></div><div class="skill__track"><div class="skill__fill" style="--level: 90%"></div></div></div>
+          <div class="skill"><div class="skill__head"><span class="skill__name">Copywriting</span><span class="skill__value">85%</span></div><div class="skill__track"><div class="skill__fill" style="--level: 85%"></div></div></div>
+          <div class="skill"><div class="skill__head"><span class="skill__name">Content Strategy</span><span class="skill__value">85%</span></div><div class="skill__track"><div class="skill__fill" style="--level: 85%"></div></div></div>
+          <div class="skill"><div class="skill__head"><span class="skill__name">SEO</span><span class="skill__value">75%</span></div><div class="skill__track"><div class="skill__fill" style="--level: 75%"></div></div></div>
+          <div class="skill"><div class="skill__head"><span class="skill__name">Data Analytic</span><span class="skill__value">80%</span></div><div class="skill__track"><div class="skill__fill" style="--level: 80%"></div></div></div>
+        </div>
+      </div>
+    </section>
+
     <section class="contact-panel" aria-labelledby="contact-heading">
       <div class="contact-copy">
-        <p>02 / Connect</p>
-        <h2 id="contact-heading">Mari mulai dari percakapan yang bagus.</h2>
+        <p>04 / Connect</p>
+        <h2 id="contact-heading">Punya target yang ingin dikejar?</h2>
       </div>
       <div class="contact-links">
-        <a class="contact-link" href="mailto:ren@rendsv.my.id">
-          <span class="contact-link__type">Email</span><span class="contact-link__value">ren@rendsv.my.id</span><span class="contact-link__arrow">↗</span>
-        </a>
-        <a class="contact-link" href="https://github.com/dsvren" target="_blank" rel="noopener noreferrer">
-          <span class="contact-link__type">GitHub</span><span class="contact-link__value">dsvren</span><span class="contact-link__arrow">↗</span>
-        </a>
-        <a class="contact-link" href="https://www.linkedin.com/in/sebastian-darren-desvera/" target="_blank" rel="noopener noreferrer">
-          <span class="contact-link__type">LinkedIn</span><span class="contact-link__value">sebastian-darren-desvera</span><span class="contact-link__arrow">↗</span>
-        </a>
-        <a class="contact-link" href="https://www.instagram.com/darren.exp/" target="_blank" rel="noopener noreferrer">
-          <span class="contact-link__type">Instagram</span><span class="contact-link__value">darren.exp</span><span class="contact-link__arrow">↗</span>
-        </a>
+        <a class="contact-link" href="mailto:ren@rendsv.my.id"><span class="contact-link__type">Email</span><span class="contact-link__value">ren@rendsv.my.id</span><span class="contact-link__arrow">↗</span></a>
+        <a class="contact-link" href="https://github.com/dsvren" target="_blank" rel="noopener noreferrer"><span class="contact-link__type">GitHub</span><span class="contact-link__value">dsvren</span><span class="contact-link__arrow">↗</span></a>
+        <a class="contact-link" href="https://www.linkedin.com/in/sebastian-darren-desvera/" target="_blank" rel="noopener noreferrer"><span class="contact-link__type">LinkedIn</span><span class="contact-link__value">sebastian-darren-desvera</span><span class="contact-link__arrow">↗</span></a>
+        <a class="contact-link" href="https://www.instagram.com/darren.exp/" target="_blank" rel="noopener noreferrer"><span class="contact-link__type">Instagram</span><span class="contact-link__value">darren.exp</span><span class="contact-link__arrow">↗</span></a>
       </div>
     </section>
 
@@ -675,7 +705,7 @@
         themeButton.setAttribute('aria-pressed', dark ? 'true' : 'false');
         themeButton.setAttribute('aria-label', dark ? 'Aktifkan tampilan cerah' : 'Aktifkan tampilan gelap');
         themeLabel.textContent = dark ? 'Mode cerah' : 'Mode gelap';
-        themeMeta.setAttribute('content', dark ? '#101318' : '#f0f1ed');
+        themeMeta.setAttribute('content', dark ? '#111512' : '#f4f4ef');
       }
 
       themeButton.addEventListener('click', function () {
@@ -692,9 +722,7 @@
         window.clearTimeout(toastTimer);
         toast.textContent = message;
         toast.classList.add('is-visible');
-        toastTimer = window.setTimeout(function () {
-          toast.classList.remove('is-visible');
-        }, 2600);
+        toastTimer = window.setTimeout(function () { toast.classList.remove('is-visible'); }, 2600);
       }
 
       function copyFallback() {
@@ -705,23 +733,15 @@
         textarea.style.opacity = '0';
         document.body.appendChild(textarea);
         textarea.select();
-        try {
-          document.execCommand('copy');
-          showToast('Email disalin: ' + email);
-        } catch (error) {
-          showToast('Salin manual: ' + email);
-        }
+        try { document.execCommand('copy'); showToast('Email disalin: ' + email); }
+        catch (error) { showToast('Salin manual: ' + email); }
         textarea.remove();
       }
 
       copyButton.addEventListener('click', function () {
         if (navigator.clipboard && window.isSecureContext) {
-          navigator.clipboard.writeText(email).then(function () {
-            showToast('Email disalin: ' + email);
-          }, copyFallback);
-        } else {
-          copyFallback();
-        }
+          navigator.clipboard.writeText(email).then(function () { showToast('Email disalin: ' + email); }, copyFallback);
+        } else { copyFallback(); }
       });
 
       syncThemeControl();
