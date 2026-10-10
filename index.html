@@ -7,6 +7,13 @@
   <meta name="theme-color" content="#f3f7f5" />
   <title>Ren — Digital Marketing Specialist</title>
   <meta name="description" content="Portfolio Ren, Digital Marketing Specialist untuk performance marketing, content strategy, dan pertumbuhan brand." />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Ren — Digital Marketing Specialist" />
+  <meta property="og:title" content="Ren — Digital Marketing Specialist" />
+  <meta property="og:description" content="Portfolio Ren, Digital Marketing Specialist untuk performance marketing, content strategy, dan pertumbuhan brand." />
+  <meta property="og:url" content="https://rendsv.my.id/" />
+  <meta name="twitter:card" content="summary" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23b9d9ca'/%3E%3Ctext x='32' y='43' font-family='Arial,sans-serif' font-size='34' font-weight='700' text-anchor='middle' fill='%2320322a'%3ER%3C/text%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -565,18 +572,22 @@
             </div>
           </div>
 
-          <form class="brief-form" id="briefForm">
-            <p class="brief-form__intro">Isi data client</p>
+          <form class="brief-form" id="briefForm" action="https://formsubmit.co/ren@rendsv.my.id" method="POST">
+            <input type="hidden" name="_subject" value="Client Brief baru dari rendsv.my.id" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
+            <p class="brief-form__intro">ISI DATA CLIENT</p>
             <div class="field-grid">
-              <div class="field"><label for="clientName">Nama</label><input id="clientName" name="name" autocomplete="name" placeholder="Nama lengkap" required /></div>
-              <div class="field"><label for="clientBusiness">Brand / bisnis</label><input id="clientBusiness" name="business" autocomplete="organization" placeholder="Nama brand" required /></div>
-              <div class="field"><label for="clientContact">Email / WhatsApp</label><input id="clientContact" name="contact" placeholder="Kontak yang bisa dihubungi" required /></div>
-              <div class="field"><label for="clientService">Kebutuhan utama</label><input id="clientService" name="service" placeholder="Contoh: Meta Ads" required /></div>
-              <div class="field field--full"><label for="clientGoal">Target dan tantangan</label><textarea id="clientGoal" name="goal" placeholder="Ceritakan target, kondisi saat ini, dan tantangan yang dihadapi" required></textarea></div>
+              <div class="field"><label for="clientName">NAMA LENGKAP</label><input id="clientName" name="name" autocomplete="name" placeholder="Nama lengkap" required /></div>
+              <div class="field"><label for="clientBusiness">NAMA BRAND</label><input id="clientBusiness" name="business" autocomplete="organization" placeholder="Nama brand" required /></div>
+              <div class="field"><label for="clientContact">KONTAK YANG BISA DIHUBUNGI</label><input id="clientContact" name="contact" placeholder="Kontak yang bisa dihubungi" required /></div>
+              <div class="field"><label for="clientService">KEBUTUHAN UTAMA</label><input id="clientService" name="service" placeholder="Contoh: Meta Ads" required /></div>
+              <div class="field field--full"><label for="clientGoal">TARGET DAN TANTANGAN</label><textarea id="clientGoal" name="goal" placeholder="Ceritakan target, kondisi saat ini, dan tantangan yang dihadapi" required></textarea></div>
             </div>
             <div class="form-actions">
               <button class="button button--accent" type="submit">Kirim brief via email <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-5-5 5 5-5 5"/></svg></button>
-              <p class="form-note">Membuka aplikasi email dengan data yang kamu isi.</p>
+              <p class="form-note">Data terkirim langsung — saya akan menghubungimu kembali.</p>
             </div>
           </form>
         </div>
@@ -625,24 +636,46 @@
       form.addEventListener('submit', function (event) {
         event.preventDefault();
         if (!form.reportValidity()) return;
+        var button = form.querySelector('button[type="submit"]');
+        var originalLabel = button.innerHTML;
         var data = new FormData(form);
-        var subject = 'Client Brief — ' + data.get('business');
-        var body = [
-          'Halo Ren,',
-          '',
-          'Saya ingin berdiskusi tentang kebutuhan digital marketing berikut:',
-          '',
-          'Nama: ' + data.get('name'),
-          'Brand / bisnis: ' + data.get('business'),
-          'Kontak: ' + data.get('contact'),
-          'Kebutuhan utama: ' + data.get('service'),
-          '',
-          'Target dan tantangan:',
-          data.get('goal'),
-          '',
-          'Terima kasih.'
-        ].join('\n');
-        window.location.href = 'mailto:ren@rendsv.my.id?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+
+        function openMailClient() {
+          var subject = 'Client Brief — ' + data.get('business');
+          var body = [
+            'Halo Ren,',
+            '',
+            'Saya ingin berdiskusi tentang kebutuhan digital marketing berikut:',
+            '',
+            'Nama: ' + data.get('name'),
+            'Brand / bisnis: ' + data.get('business'),
+            'Kontak: ' + data.get('contact'),
+            'Kebutuhan utama: ' + data.get('service'),
+            '',
+            'Target dan tantangan:',
+            data.get('goal'),
+            '',
+            'Terima kasih.'
+          ].join('\n');
+          window.location.href = 'mailto:ren@rendsv.my.id?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+        }
+
+        button.disabled = true;
+        button.innerHTML = 'Mengirim&hellip;';
+        fetch(form.action, {
+          method: 'POST',
+          body: data,
+          headers: { 'Accept': 'application/json' }
+        }).then(function (res) {
+          if (!res.ok) throw new Error('send failed');
+          form.reset();
+          button.innerHTML = 'Terkirim &mdash; saya akan menghubungimu';
+          setTimeout(function () { button.disabled = false; button.innerHTML = originalLabel; }, 5000);
+        }).catch(function () {
+          button.disabled = false;
+          button.innerHTML = originalLabel;
+          openMailClient();
+        });
       });
     }());
   </script>
